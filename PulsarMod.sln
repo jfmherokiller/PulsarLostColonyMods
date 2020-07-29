@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulsarMod", "PulsarMod\PulsarMod.csproj", "{C11EFF4A-4E2E-458E-974B-C8EDBB6CC1A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtkPlugin", "AtkPlugin\AtkPlugin.csproj", "{A47238DD-BD2D-4008-8402-A6F55D571BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulsarCRepl", "PulsarCRepl\PulsarCRepl.csproj", "{C57B186B-2651-49E4-923C-777D5F224CF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C11EFF4A-4E2E-458E-974B-C8EDBB6CC1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11EFF4A-4E2E-458E-974B-C8EDBB6CC1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11EFF4A-4E2E-458E-974B-C8EDBB6CC1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11EFF4A-4E2E-458E-974B-C8EDBB6CC1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47238DD-BD2D-4008-8402-A6F55D571BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47238DD-BD2D-4008-8402-A6F55D571BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47238DD-BD2D-4008-8402-A6F55D571BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47238DD-BD2D-4008-8402-A6F55D571BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57B186B-2651-49E4-923C-777D5F224CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57B186B-2651-49E4-923C-777D5F224CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57B186B-2651-49E4-923C-777D5F224CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57B186B-2651-49E4-923C-777D5F224CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
