@@ -1,11 +1,8 @@
 using System;
-using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using Jint;
 using Jint.Native;
 using Jint.Runtime;
-using Jint.Runtime.Interop;
 using MelonLoader;
 using Console = System.Console;
 

@@ -20,12 +20,14 @@ namespace PulsarCRepl
 
         public void SetupEnginePieces()
         {
+            //setup print function
             myengine = myengine
                 .SetValue("print", new Action<object>(Value => { engineOut += ("\n" + Value + "\n"); }));
-
+            //add a load function
             myengine = myengine.SetValue("load", new Func<string, object>(
                 path => myengine.Execute(File.ReadAllText(path))
                     .GetCompletionValue()));
+            //setup Assembly-Csharp,Assembly-csharp-firstpass
             myengine = JintAdditons.AddGameSpecificClasses(myengine);
         }
 
