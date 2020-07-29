@@ -83,6 +83,11 @@ namespace PulsarMod
                 MelonModLogger.Log(Comet.ID.ToString());
                 MelonModLogger.Log(Comet.ToString());
             }
+
+            if (GUILayout.Button("Kill All Nearby Hostiles"))
+            {
+                killNearbyEnemies();
+            }
             // Make the second button.
             if (GUILayout.Button("Close cheats"))
             {
@@ -104,6 +109,18 @@ namespace PulsarMod
                 PLServer.Instance.ClientAddToShipLog("SYS",IString,Color.cyan);
             }
             
+        }
+
+        public void killNearbyEnemies()
+        {
+            foreach (PLPawnBase plpawnBase in PLGameStatic.Instance.AllPawnBases.Where(mpawn => !mpawn.GetIsFriendly()))
+            {
+                //filters for more specific like if pawn is in room
+                if (ExtraUtiltiies.ScanPawnCheckIfValid(plpawnBase))
+                {
+                    plpawnBase.TakeDamage(float.MaxValue,true,PLServer.Instance.AllPlayers.First().GetPlayerID());
+                }
+            }
         }
     }
 }
