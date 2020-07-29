@@ -26,7 +26,7 @@ namespace PulsarCRepl
             myengine = myengine.SetValue("load", new Func<string, object>(
                 path => myengine.Execute(File.ReadAllText(path))
                     .GetCompletionValue()));
-            myengine = JintAdditons.AddUnityGameSpecifics(myengine);
+            myengine = JintAdditons.AddGameSpecificClasses(myengine);
         }
 
         public string GetOutput()

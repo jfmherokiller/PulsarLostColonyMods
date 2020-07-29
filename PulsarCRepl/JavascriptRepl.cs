@@ -8,6 +8,7 @@ using Jint.Runtime;
 using Jint.Runtime.Interop;
 using MelonLoader;
 using Console = System.Console;
+
 namespace PulsarCRepl
 {
     class JintBits
@@ -17,19 +18,16 @@ namespace PulsarCRepl
             var engine = new Engine(cfg => { cfg.AllowClr(AppDomain.CurrentDomain.GetAssemblies()); });
 
             engine
-                .SetValue("print", new Action<object>(Value =>
-                {
-                    MelonModLogger.Log(Value.ToString());
-                }))
+                .SetValue("print", new Action<object>(Value => { MelonModLogger.Log(Value.ToString()); }))
                 .SetValue("load", new Func<string, object>(
                     path => engine.Execute(File.ReadAllText(path))
                         .GetCompletionValue()));
-            engine = JintAdditons.AddUnityGameSpecifics(engine);
-                
-           MelonModLogger.Log("Type 'exit' to leave, " +
-                              "'print()' to write on the console, " +
-                              "'load()' to load scripts.");
-           MelonModLogger.Log("");
+            engine = JintAdditons.AddGameSpecificClasses(engine);
+
+            MelonModLogger.Log("Type 'exit' to leave, " +
+                               "'print()' to write on the console, " +
+                               "'load()' to load scripts.");
+            MelonModLogger.Log("");
 
             var defaultColor = Console.ForegroundColor;
             while (true)
